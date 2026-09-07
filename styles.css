@@ -238,6 +238,24 @@ body {
     font-size: 0.9rem;
 }
 
+.error-msg {
+    display: none;
+    color: #dc3545;
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+.form-group.invalid input,
+.form-group.invalid select {
+    border-color: #dc3545;
+    background-color: #fff8f8;
+}
+
+.form-group.invalid .error-msg {
+    display: block;
+}
+
+
 /* La comarca y el capital */
 header {
     background-color: #333;
@@ -258,4 +276,77 @@ footer {
 
 footer p {
     margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .dropdown-content {
+        position: relative;
+        box-shadow: none;
+        width: 100%;
+        background-color: #444;
+    }
+    
+    .dropdown-content a {
+        color: white;
+    }
+
+    .search-box {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .search-box input {
+        width: 70%;
+    }
+
+    .news-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-img {
+        margin: 0 auto 15px auto;
+    }
+    
+    .news-table th, .news-table td {
+        display: block;
+        width: 100%;
+    }
 }

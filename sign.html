@@ -24,10 +24,6 @@
                     </div>
                 </li>
             </ul>
-            <div class="search-box">
-                <input type="text" id="globalSearchInput" placeholder="Search...">
-                <button type="button" onclick="executeGlobalSearch()">Search</button>
-            </div>
         </nav>
     </header>
     <div class="container" style="max-width: 650px;">
@@ -76,18 +72,22 @@
                 </div>
             </div>
 
-            <div class="form-group">
+            <div class="form-group" id="grupoGenero">
                 <label>Género</label>
                 <input type="radio" name="genero" value="Masculino" required style="width:auto;"> Masculino &nbsp;&nbsp;
                 <input type="radio" name="genero" value="Femenino" style="width:auto;"> Femenino
+                <input type="radio" name="genero" value="No binario" style="width:auto;"> No binario
+                <input type="radio" name="genero" value="No decir" style="width:auto;"> Prefiero no decir
+                <span class="error-msg" id="errGenero">Debe seleccionar un género.</span>
             </div>
+
 
             <div class="form-group">
                 <label>Actividades Favoritas</label>
-                <input type="checkbox" name="actividades" value="Fútbol" style="width:auto;"> Fútbol <br>
-                <input type="checkbox" name="actividades" value="Baloncesto" style="width:auto;"> Baloncesto <br>
-                <input type="checkbox" name="actividades" value="Voleibol" style="width:auto;"> Voleibol <br>
-                <input type="checkbox" name="actividades" value="Ciclismo" style="width:auto;"> Ciclismo
+                <input type="checkbox" name="actividades" value="Cantar" style="width:auto;"> Cantar <br>
+                <input type="checkbox" name="actividades" value="Bailar" style="width:auto;"> Bailar <br>
+                <input type="checkbox" name="actividades" value="Jangear" style="width:auto;"> Jangear <br>
+                <input type="checkbox" name="actividades" value="Nada" style="width:auto;"> Nada a todos nos agrada
             </div>
 
             <div class="btn-group" style="justify-content: center;">
