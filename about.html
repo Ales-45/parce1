@@ -1,33 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parcero</title>
+    <title>Parcial - About Us</title>
     <link rel="stylesheet" href="styles.css" type="text/css">
-
 </head>
 
 <body>
-    <header class="header">
-        <div class="header-content">
-            <a href="#" class="logo"></a>
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="#">Acerca de</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header>
+        <nav class="navbar">
+            <div><strong>Parcero</strong></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Noticias</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="sign.html">Sign Up</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">About ▾</a>
+                    <div class="dropdown-content">
+                        <a href="about.html?tab=mision">Misión</a>
+                        <a href="about.html?tab=vision">Visión</a>
+                        <a href="about.html?tab=equipo">Equipo de Trabajo</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="search-box">
+                <input type="text" id="globalSearchInput" placeholder="Search...">
+                <button type="button" onclick="executeGlobalSearch()">Search</button>
+            </div>
+        </nav>
     </header>
-    <main></main>
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Parcero. Todos los derechos reservados.</p>
+    <div class="container">
+        <div id="viewMisionVision" class="about-section" style="display:none;">
+            <div class="about-img"></div>
+            <div>
+                <h2 id="aboutTitle">Título</h2><br>
+                <p id="aboutText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut
+                    commodo sagittis, justo dui pretium dui, non pulvinar lorem felis nec erat.</p>
+                <br>
+                <button class="btn btn-primary" onclick="cambiarTamanoLetra()">Cambiar tamaño de letra</button>
+                <button class="btn btn-primary" onclick="cambiarColorLetra()">Cambiar color de letra</button>
+            </div>
         </div>
+
+        <div id="viewEquipo" style="display:none;">
+            <div class="slider-container">
+                <button class="slider-btn prev" onclick="moveSlide(-1)">❮</button>
+
+                <div class="slide active">
+                    <img src="https://placeholder.com" alt="User 1">
+                    <h3>Juan Pérez</h3>
+                    <h4>Perfil Profesional</h4>
+                    <p>Desarrollador Full Stack experto en arquitecturas web limpias.</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com" target="_blank">Facebook</a>
+                        <a href="https://twitter.com" target="_blank">Twitter</a>
+                        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://placeholder.com" alt="User 2">
+                    <h3>María Gómez</h3>
+                    <h4>Diseñadora UI/UX</h4>
+                    <p>Especialista en wireframing, mockups y sistemas de diseño adaptivos.</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com" target="_blank">Facebook</a>
+                        <a href="https://twitter.com" target="_blank">Twitter</a>
+                        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://placeholder.com" alt="User 3">
+                    <h3>Carlos Mendoza</h3>
+                    <h4>QA Engineer</h4>
+                    <p>Encargado de la lógica, validaciones exhaustivas y pruebas de estrés.</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com" target="_blank">Facebook</a>
+                        <a href="https://twitter.com" target="_blank">Twitter</a>
+                        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+
+                <button class="slider-btn next" onclick="moveSlide(1)">❯</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Parcero | 2026 | Alejandro Saenz</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

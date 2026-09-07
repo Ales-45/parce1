@@ -1,33 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parcero</title>
+    <title>Parcero - Noticias</title>
     <link rel="stylesheet" href="styles.css" type="text/css">
-
 </head>
 
 <body>
-    <header class="header">
-        <div class="header-content">
-            <a href="#" class="logo"></a>
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="#">Acerca de</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header>
+        <nav class="navbar">
+            <div><strong>Parcero</strong></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Noticias</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="sign.html">Sign Up</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">About ▾</a>
+                    <div class="dropdown-content">
+                        <a href="about.html?tab=mision">Misión</a>
+                        <a href="about.html?tab=vision">Visión</a>
+                        <a href="about.html?tab=equipo">Equipo de Trabajo</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="search-box">
+                <input type="text" id="globalSearchInput" placeholder="Search...">
+                <button type="button" onclick="executeGlobalSearch()">Search</button>
+            </div>
+        </nav>
     </header>
-    <main></main>
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Parcero. Todos los derechos reservados.</p>
+
+    <div class="container">
+        <!-- 3 Noticias Principales -->
+        <div class="news-grid">
+            <div class="news-card">
+                <h3>Tecnología Avanza</h3>
+                <img src="https://placeholder.com" alt="Noticia 1">
+                <p>Descripción breve de la noticia de tecnología de última hora.</p>
+                <button onclick="window.open('https://techcrunch.com', '_blank')">Leer completa</button>
+            </div>
+            <div class="news-card">
+                <h3>Deportes de Hoy</h3>
+                <img src="https://placeholder.com" alt="Noticia 2">
+                <p>Resumen de los acontecimientos deportivos más relevantes del día.</p>
+                <button onclick="window.open('https://espn.com', '_blank')">Leer completa</button>
+            </div>
+            <div class="news-card">
+                <h3>Economía Global</h3>
+                <img src="https://placeholder.com" alt="Noticia 3">
+                <p>Las finanzas mundiales sufren cambios drásticos esta semana.</p>
+                <button onclick="window.open('https://bloomberg.com', '_blank')">Leer completa</button>
+            </div>
         </div>
+
+        <!-- Enlaces Inferiores -->
+        <h3>Otras páginas de noticias...</h3>
+        <table class="news-table">
+            <thead>
+                <tr>
+                    <th>NACIONALES</th>
+                    <th>INTERNACIONALES</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <ul>
+                            <li><a href="https://eltiempo.com" target="_blank">El Tiempo</a></li>
+                            <li><a href="https://elespectador.com" target="_blank">El Espectador</a></li>
+                            <li><a href="https://lanacion.com.co" target="_blank">La Nación</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li><a href="https://nytimes.com" target="_blank">The New York Times</a></li>
+                            <li><a href="https://bbc.com" target="_blank">BBC News</a></li>
+                            <li><a href="https://elpais.com" target="_blank">El País</a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <footer>
+        <p>&copy; Parcero | 2026 | Alejandro Saenz</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
